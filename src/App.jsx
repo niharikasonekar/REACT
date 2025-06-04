@@ -901,26 +901,75 @@
 
 
 
+// ========================increase dereace==================
+// import { useState,useEffect } from "react"
+// const APP=()=>{
+
+//   const [myval, setmyval]=useState(0);
+
+//   useEffect(()=>{
+
+//     setTimeout(() => {
+      
+//     setmyval(myval+1);
+//   },5000)
+// });
+// return(
+
+//   <>
+  
+//   <h1>welcome to my app:{myval}</h1>
+//   </>
+// )
+// }
+
+// export default APP;
+
+// ======================================================================================use effect
+
+
+//  import { useState,useEffect } from "react"
+// const APP=()=>{
+
+//  const [count, setcount]=useState(0);
+//  const [multi, setmulti]=useState(0);
+//  useeffect>(()=>{ 
+
+//   setmulti(count*2);
+
+//   },[count])
+
+//  return(
+//   <>
+
+//   <h1>welcome to app</h1>
+//   <button onclick=
+//   </>
+//  )
+
+// }
+
+// ====================================================form==================================================
 
 import { useState,useEffect } from "react"
 const APP=()=>{
 
-  const [myval, setmyval]=useState(0);
+  const [name, setname]=useState("");
+ const [city, setcity]=useState("");
 
-  useEffect(()=>{
+ const handelsubmit=()=> {
+  console.log({name:name,city:city})
+ }
+  return(
+    <>
+<h1>Application form for cybrom</h1>
 
-    setTimeout(() => {
-      
-    setmyval(myval+1);
-  },5000)
-});
-return(
+Enter name:<input type="text" value={name} onchange={(e)=>{setname(e.target.value)}}/>
+<br/>
+    </>
 
-  <>
-  
-  <h1>welcome to my app:{myval}</h1>
-  </>
-)
+
+
+  )
 }
-
 export default APP;
