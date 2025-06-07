@@ -951,25 +951,437 @@
 
 // ====================================================form==================================================
 
-import { useState,useEffect } from "react"
-const APP=()=>{
+// import { useState,useEffect } from "react"
+// const APP=()=>{
 
-  const [name, setname]=useState("");
- const [city, setcity]=useState("");
+//   const [name, setname]=useState("");
+//  const [city, setcity]=useState("");
 
- const handelsubmit=()=> {
-  console.log({name:name,city:city})
- }
+//  const handelsubmit=()=> {
+//   console.log({name:name,city:city})
+//  }
+//   return(
+//     <>
+// <h1>Application form for cybrom</h1>
+
+// Enter name:<input type="text" value={name} onchange={(e)=>{setname(e.target.value)}}/>
+// <br/>
+//     </>
+
+
+
+//   )
+// }
+// export default APP;
+
+
+// =====================================================================================
+
+// import { useState,useEffect } from "react"
+
+// const APP=()=>{
+
+//   const[input,setinput]=usestate({});  //input={}
+//   // input={rollno.1511, name:niharika, city:"bhopal", fees:5000}
+// // ================================or
+// //   const [name, setname]=useState("");
+// //  const [city, setcity]=useState("");
+// // const [fes, setfees]=useState("");
+// // const [rno, setrno]=useState("");
+
+
+// )
+// }
+
+
+
+
+
+
+
+// import { useState } from "react";
+// import axios from "axios";
+//  const App=()=>{
+//     const[input,setInput]=useState({})
+// const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+
+//     setInput(values=>({...values,[name]:value}))
+//     console.log(input)
+// }
+//     const handleSubmit=async()=>{
+//         let api="http://localhost:3000/student";
+//         const response=await axios.post(api,input )
+//         alert("data inserted")
+      
+//     }
+// return(
+//     <>
+
+// Enter employmentnum:<input type="text" name="employmentnum" onChange={handleInput}/><br />
+// Enter name:<input type="text" name="name" onChange={handleInput}/><br />
+// Enter desinetion:<input type="text" name="desinetion" onChange={handleInput}/><br />
+// Enter city:<input type="text" name="city" onChange={handleInput}/><br />
+// <button onClick={handleSubmit} >click me</button>
+//     </>
+// )
+//  }
+//  export default App;
+
+
+
+
+
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/students";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }   
+
+//   return(
+//     <>
+//      <h3>Application Form!!</h3>
+//     Enter Name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     Enter Fees: <input type="text" name="fees"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/employee";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }
+
+//   return(
+//     <>
+//      <h3>Employee Records!!</h3>
+//     Employee name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Employee Number: <input type="text" name="number"  onChange={handleInput}/><br/><br/>
+//     Enter Designation: <input type="text" name="designation"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//==========================================================================================================================
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/students";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }   
+
+//   return(
+//     <>
+//      <h3>Application Form!!</h3>
+//     Enter Name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     Enter Fees: <input type="text" name="fees"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/employee";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }
+
+//   return(
+//     <>
+//      <h3>Employee Records!!</h3>
+//     Employee name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Employee Number: <input type="text" name="number"  onChange={handleInput}/><br/><br/>
+//     Enter Designation: <input type="text" name="designation"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//==========================================================================================================================
+
+// 
+
+
+
+
+
+// mport axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/students";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }   
+
+//   return(
+//     <>
+//      <h3>Application Form!!</h3>
+//     Enter Name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     Enter Fees: <input type="text" name="fees"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/employee";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }
+
+//   return(
+//     <>
+//      <h3>Employee Records!!</h3>
+//     Employee name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Employee Number: <input type="text" name="number"  onChange={handleInput}/><br/><br/>
+//     Enter Designation: <input type="text" name="designation"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//==========================================================================================================================
+
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/students";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }   
+
+//   return(
+//     <>
+//      <h3>Application Form!!</h3>
+//     Enter Name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     Enter Fees: <input type="text" name="fees"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/employee";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }
+
+//   return(
+//     <>
+//      <h3>Employee Records!!</h3>
+//     Employee name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Employee Number: <input type="text" name="number"  onChange={handleInput}/><br/><br/>
+//     Enter Designation: <input type="text" name="designation"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//==========================================================================================================================
+
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/students";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }   
+
+//   return(
+//     <>
+//      <h3>Application Form!!</h3>
+//     Enter Name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Enter Rollno: <input type="text" name="rollno"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     Enter Fees: <input type="text" name="fees"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+
+// import axios from "axios";
+// import { useState } from "react";
+// const App=()=>{
+//   const[input,setInput]=useState({});
+//   const handleInput=(e)=>{
+//     let name=e.target.name;
+//     let value=e.target.value;
+//     setInput(Values=>({...Values,[name]:value}))
+//     console.log(input)
+//   }
+//   const handleSubmit=async()=>{
+//     // console.log(input)
+//     let api="http://localhost:3000/employee";
+//     const response=await axios.post(api,input);
+//     console.log(response.data)
+//     alert("Data Inserted")
+//   }
+
+//   return(
+//     <>
+//      <h3>Employee Records!!</h3>
+//     Employee name: <input type="text" name="name"  onChange={handleInput}/><br/><br/>
+//     Employee Number: <input type="text" name="number"  onChange={handleInput}/><br/><br/>
+//     Enter Designation: <input type="text" name="designation"  onChange={handleInput}/><br/><br/>
+//     Enter City: <input type="text" name="city"  onChange={handleInput}/><br/><br/>
+//     <button onClick={handleSubmit}>Save!!!</button>
+//     </>
+//   )
+// }
+// export default App;
+
+//=====================================================login page=====================================================================
+
+import { BrowserRouter,Routes,Route } from "react-router-dom"
+import Layout from "./layout"
+import Home from "./pages/Home"
+import Insert from "./pages/insert"
+const App=()=>{
   return(
     <>
-<h1>Application form for cybrom</h1>
+       <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout/>}>
+            <Route index element={<Home/>}/>
+            <Route path="home" element={<Home/>}/>
+            <Route path="insert" element={<Insert/>}/>
 
-Enter name:<input type="text" value={name} onchange={(e)=>{setname(e.target.value)}}/>
-<br/>
+            </Route>
+          </Routes>
+       </BrowserRouter>
     </>
-
-
-
   )
 }
-export default APP;
+export default App
