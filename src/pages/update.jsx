@@ -1,10 +1,12 @@
 // import axios from "axios";
 // import  {useeffect,usestate} from "react";
- 
 
-// const Display=()=>{
 
-//     const[mydata,setMydata] =usestate([]);
+
+// const Update=()=>{
+
+//      const [mydata,setmydata]=usestate([]);
+//       const[mydata,setMydata] =usestate([]);
 //     const loadData =async ()=>{
 //         let apl =""
 
@@ -18,36 +20,46 @@
 
 //     },[]);
 
-// const ans = mydata.map((key) =>{
-    // return(
-    //     <>
-    //     <tr>
-    //         <td>{key.empno}</td>
-    //          <td>{key.name}</td>
-    //           <td>{key.degignation}</td>
-    //            <td>{key.salary}</td>
-             
 
-    //     </tr>
-        /* </>
 
+//     const recDelete=async(id)=>{
+//         const api=""
+//         const responce=await axios.delete(api);
+//         alert("record succesfully Deleted!!!");
+
+//         loadData();
+   
+   
+//     }
 
 
 
-    )
-})
-    }
-// } */
+//     <>
 
+//     {/* /* <h1>Dislpay employeee Data</h1> */}
+//     <hr/>
 
-
+//     <table>
+//         <tr>
+//             <th>empno</th>
+//  <th>name</th>
+//              <th>degignation</th>
+//               <th>salary</th>
+//         </tr>
+//         {async}
+//     </table>
+//     </>
+// }
+// // export default Update; */
 
 
 
 import { useState,useEffect } from "react";
 import axios from "axios";
-const Display=()=>{
+
+const Update=()=>{
   const[mydata,setMydata]=useState([]);
+  
   const loadData=async()=>{
     let api="http://localhost:3000/employee";
     const response=await axios.get(api)
@@ -57,6 +69,17 @@ const Display=()=>{
   useEffect(()=>{
     loadData();
   },[])
+  const recDelete=async(id)=>{
+    const api=http://localhost:3000/employee/${id}
+    const response=await axios.delete(api);
+    alert("data successfully deleted");
+    loadData();
+  }
+
+
+  
+    
+       
   let sno=0;
   const ans=mydata.map((key)=>{
     sno++;
@@ -65,9 +88,15 @@ const Display=()=>{
        <tr>
         <td>{sno}</td>
         <td>{key.name}</td>
-        <td>{key.Empno}</td>
+        <td>{key.empno}</td>
         <td>{key.designation}</td>
         <td>{key.salary}</td>
+        <td>
+            <button onClick={()=>{myEdit(key.id)}}>Edit</button>
+        </td>
+        <td>
+            <button onClick={()=>{recDelete(key.id)}}>Delete</button>
+        </td>
        </tr>
       </>
     )
@@ -83,10 +112,12 @@ const Display=()=>{
               <th>Empno</th>
               <th>Designation</th>
               <th>salary</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
             {ans}
           </table>
         </>
     )
 }
-export default Display;
+export default Update;

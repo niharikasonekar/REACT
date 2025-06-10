@@ -1368,6 +1368,7 @@ import { BrowserRouter,Routes,Route } from "react-router-dom"
 import Layout from "./layout"
 import Home from "./pages/Home"
 import Insert from "./pages/insert"
+import Display from "./pages/display"
 const App=()=>{
   return(
     <>
@@ -1377,6 +1378,7 @@ const App=()=>{
             <Route index element={<Home/>}/>
             <Route path="home" element={<Home/>}/>
             <Route path="insert" element={<Insert/>}/>
+             <Route path="display" element={<Display/>}/>
 
             </Route>
           </Routes>
@@ -1384,4 +1386,4 @@ const App=()=>{
     </>
   )
 }
-export default App
+export default App;
