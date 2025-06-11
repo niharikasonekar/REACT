@@ -1364,26 +1364,81 @@
 
 //=====================================================login page=====================================================================
 
-import { BrowserRouter,Routes,Route } from "react-router-dom"
-import Layout from "./layout"
-import Home from "./pages/Home"
-import Insert from "./pages/insert"
-import Display from "./pages/display"
+// import { BrowserRouter,Routes,Route } from "react-router-dom"
+// import Layout from "./layout"
+// import Home from "./pages/Home"
+// import Insert from "./pages/insert"
+// import Display from "./pages/display"
+// const App=()=>{
+//   return(
+//     <>
+//        <BrowserRouter>
+//           <Routes>
+//             <Route path="/" element={<Layout/>}>
+//             <Route index element={<Home/>}/>
+//             <Route path="home" element={<Home/>}/>
+//             <Route path="insert" element={<Insert/>}/>
+//              <Route path="display" element={<Display/>}/>
+
+//             </Route>
+//           </Routes>
+//        </BrowserRouter>
+//     </>
+//   )
+// }
+// export default App;
+
+
+
+
+
+// promps drill========================================================
+
+
+
+
+
+
+import { createContext, useState} from "react";
+
+import comp1 from "./comp1";
+import Comp1 from "./comp1";
+
 const App=()=>{
+  const [user,setuser]= useState("niharika");
   return(
     <>
-       <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path="home" element={<Home/>}/>
-            <Route path="insert" element={<Insert/>}/>
-             <Route path="display" element={<Display/>}/>
 
-            </Route>
-          </Routes>
-       </BrowserRouter>
+    <h1>welcome {user} !!!!!!</h1>
+    
+    <Comp1 user={user}/>
     </>
   )
-}
-export default App;
+  }
+
+  export default App;
+
+
+
+
+
+
+//   import { createContext, useState} from "react";
+
+// const userContext=createContext();
+// import comp1 from "./comp1";
+// import Comp1 from "./comp1";
+
+// const App=()=>{
+//   const [user,setuser]= useState("niharika");
+//   return(
+//     <>
+
+//     <h1>welcome{user} !!!!!!</h1>
+//     <userContext.provider value={{user}}
+//     <Comp1 user={user}/>
+//     </>
+//   )
+//   }
+
+//   export default App;
