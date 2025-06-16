@@ -1399,24 +1399,24 @@
 
 
 
-import { createContext, useState} from "react";
+// import { createContext, useState} from "react";
 
-import comp1 from "./comp1";
-import Comp1 from "./comp1";
+// import comp1 from "./comp1";
+// import Comp1 from "./comp1";
 
-const App=()=>{
-  const [user,setuser]= useState("niharika");
-  return(
-    <>
+// const App=()=>{
+//   const [user,setuser]= useState("niharika");
+//   return(
+//     <>
 
-    <h1>welcome {user} !!!!!!</h1>
+//     <h1>welcome {user} !!!!!!</h1>
     
-    <Comp1 user={user}/>
-    </>
-  )
-  }
+//     <Comp1 user={user}/>
+//     </>
+//   )
+//   }
 
-  export default App;
+//   export default App;
 
 
 
@@ -1442,3 +1442,58 @@ const App=()=>{
 //   }
 
 //   export default App;
+
+
+
+// ==================================================
+// import {useContext, usestate} from  "react";
+// import cybrom from "./Cybrom1";
+// import cybrom from "./Bhopal";
+// const mycontext=creatcontext();
+// const App=()=>{
+
+//   const {user,setuser}=usestate("riya!!");
+//   return(
+// <>
+// <h1>welcome to app: {user}!</h1>
+// <button onClick={()=>{setuser("priya")}}>click</button>
+
+
+// <mycontext.provider value={{user,setuser}}>
+//   <Cybrom/>
+// </mycontext.provider>
+
+// </>
+//   )
+// }
+
+// export default App;
+// export {mycontext};
+
+// =============================use mamo hook/======
+import { useState,useMemo } from "react";
+
+
+
+const App = () => {
+  const [add, setAdd] = useState(0);
+  const [minus, setMinus] = useState(100);
+
+  const myMulti = useMemo(() => {
+    console.log("**");
+    return add * 2;
+  }, [add]);
+
+  return (
+    <>
+      <h1>Welcome to my App</h1>
+      <h2>Multiplication of add by 2: {myMulti}</h2>
+      <button onClick={() => setAdd(add + 1)}>Addition</button>
+      <button onClick={() => setMinus(minus - 1)}>Subtraction</button>
+      <h2>Add value: {add}</h2>
+      <h2>Minus value: {minus}</h2>
+    </>
+  );
+};
+
+export default App;
