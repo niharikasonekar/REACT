@@ -1470,7 +1470,7 @@
 // export default App;
 // export {mycontext};
 
-// =============================use mamo hook/======
+// =============================use mamo hook/======16 june 2025
 import { useState,useMemo } from "react";
 
 
@@ -1495,5 +1495,56 @@ const App = () => {
     </>
   );
 };
+
+export default App;
+
+
+
+// =============================userafooooo=============================
+
+
+
+
+
+
+// reduxtoolkit vimp  ====================================================
+
+
+// const Nina=()=>{
+//   return(
+//     <>
+//     <h1>welcome to cybrom</h1>
+//     <button onClick={()=>{dispat(increment())}}>increment</button>
+//  <h1>{cnt}</h1>
+//      <button onClick={()=>{dispat(Decrement())}}>decrement</button>
+    
+//     </>
+//   )
+// // }
+
+
+
+
+
+
+
+
+import{useSelector,useDispatch} from "react-redux";
+import{bgcolorChange} from "./colorSlice";
+const App=()=>{
+  const myclr=useSelector(state=>state.mycolor.color)
+
+const dispatch=useDispatch();
+return(
+  <>
+  
+  <h1>welcome!!!!!!!!</h1>
+  
+  <button onClick={()=>{dispatch(bgcolorChange())}}>click here!</button>
+  <div style={{width:"200px",height :"200px",backgroundColor:myclr}}></div>
+  
+  </>
+)
+}
 
 export default App;
